@@ -1,0 +1,34 @@
+TITLE: Collision of the Lights
+
+Description:
+This scene displays a cornell box with a wall dividing two lights: Red (area lights) and Blue (point lights)
+Here we can see chess pieces and spheres in the scene where the Queen is in the intersection of the two lights.
+By this ensemble and collision of the lights, we get a combined magenta lights being refracted by the queen. 
+Lastly, DOF blur is added on top to make a clearer focus on the beautiful glass-like chess queen.
+
+The image contains the following extra features implemented:
+
+1. Fresnel Reflection 
+--> Easly observable on the sphere on the left
+
+2. Refraction 
+--> although the rook is blurred, you can see the checkerboard on the bottom is being refracted.
+Also the queen has refraction which can be observed towards the base. but it also has reflection applied making a more distorted image
+
+3. DOF blur
+- The main focus is on the chess queen and the sphere on the left, leaving a fuzzy focus on the outer images.
+
+4. Area Lights
+- The red light in this scene is using area lights, where the Rook and sphere are displaying soft shadows. 
+- Due to the DOF blur, the soft shadows and hard shadows (point light ray trace) are a bit difficult to observe, but you can see tell they are softer.
+- I included a separate .png file to show a more clearer demonstration for this in the assignment submission
+
+5. Path Tracing
+- path tracing was implemented to create soft shadows as well as a more well-lit environment along with indirect lighting (color bleeding)
+- The sphere on the right has some of the red light being bounced onto it. Due to the blur it is a bit subtle and hard to see...
+- The scene could have had a clearer image (less noise) if I increased the sampling.
+- But unfortunately, I could not do this as the image already took 92 hours to render... If I implemented TAICHI maybe it could have been faster
+
+6. Acceleration using hierarchical bounding volumes (BVH)
+- Last but not least, this scene's chess queen and rook piece meshes were rendered using BVH
+- If it wasn't for this techinqiue, this image may never have seen the light of day because it would have taken longer than 92 hours

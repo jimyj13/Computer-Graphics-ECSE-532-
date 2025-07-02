@@ -1,0 +1,117 @@
+{
+    "resolution": [480, 360],
+    "AA_jitter": false,
+    "AA_samples": 3,
+    "ambient": [0.0, 0.0, 0.0],
+    "camera": {
+        "position": [0.0, 4.0, 6.0],
+        "lookAt": [0.0, 1.5, 0.0],
+        "up": [0.0, 1.0, 0.0],
+        "fov": 45.0
+    },
+    "materials": [
+        {
+            "name": "white",
+            "diffuse": [1.0, 1.0, 1.0],
+            "specular": [0.0, 0.0, 0.0],
+            "shininess": 50,
+            "refraction_index": 1.5
+        },
+        {
+            "name": "white_ball",
+            "diffuse": [1.0, 1.0, 1.0],
+            "specular": [0.0, 0.0, 0.0],
+            "shininess": 60
+        },
+        {
+            "name": "forest_green",
+            "diffuse": [0.17, 0.35, 0.11],
+            "specular": [0.9, 0.9, 0.9],
+            "shininess": 140,
+            "reflection_index": 1.2
+        },
+        {
+            "name": "olympic_blue",
+            "diffuse": [0.00, 0.56, 0.80],
+            "specular": [0.9, 0.9, 0.9],
+            "shininess": 120,
+            "reflection_index": 1.5
+        },
+        {
+            "name": "cherry_red",
+            "diffuse": [0.87, 0.19, 0.39],
+            "specular": [0.6, 0.6, 0.6],
+            "shininess": 100
+        }
+    ],
+    "objects": [
+        {
+            "name": "floor",
+            "type": "plane",
+            "normal": [0.0, 1.0, 0.0],
+            "position": [0.0, 0.0, 0.0],
+            "materials": ["white"]
+        },
+        {
+            "name": "left_wall",
+            "type": "plane",
+            "normal": [1.0, 0.0, 0.0],
+            "position": [-3.0, 0.0, 0.0],
+            "materials": ["forest_green"]
+        },
+        {
+            "name": "right_wall",
+            "type": "plane",
+            "normal": [-1.0, 0.0, 0.0],
+            "position": [3.0, 0.0, 0.0],
+            "materials": ["olympic_blue"]
+        },
+        {
+            "name": "back_wall",
+            "type": "plane",
+            "normal": [0.0, 0.0, 1.0],
+            "position": [0.0, 0.0, -3.0],
+            "materials": ["cherry_red"]
+        },
+        {
+            "name": "ceiling",
+            "type": "plane",
+            "normal": [0.0, -1.0, 0.0],
+            "position": [0.0, 6.0, 0.0],
+            "materials": ["white"]
+        },
+        {
+            "name": "BOX",
+            "type": "box",
+            "materials": ["white"], 
+            "min": [-0.5, 0, -1], 
+            "max": [1.5, 3, 0]
+        },
+        {
+            "name": "ball1",
+            "type": "sphere",
+            "radius": 0.7,
+            "position": [-1.0, 0.5, 0.5],
+            "materials": ["white_ball"]
+        },
+        {
+            "name": "ball2",
+            "type": "sphere",
+            "radius": 0.8,
+            "position": [2.0, 1.5, -2.0],
+            "materials": ["forest_green"]
+        }
+    ],
+    "lights": [
+        {
+            "name": "ceiling_light",
+            "type": "area",
+            "position": [-2.0, 3.8, -2.0],
+            "size": [2.0, 2.0, 0.5],
+            "colour": [1.0, 1.0, 1.0],
+            "power": 10
+        }
+    ],
+    "path_tracing": true,
+    "area_lights": true
+}
